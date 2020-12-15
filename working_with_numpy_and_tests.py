@@ -4,7 +4,7 @@ import numpy as np
 
 '''
 `assertIs` can be replaced with `assertTrue` in that case, can't it?
-And try some other examples with numpy methods calls.
+And try some other examples with NumPy-methods calls.
 
 Do not hesitate to experiment with this code and tell us, if something goes wrong! 
 '''

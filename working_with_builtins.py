@@ -3,7 +3,7 @@ import copy
 import types
 
 '''
-Can highlighted checks in the first function be replaced with `callable()`?
+Can highlighted `isinstance`-checks in the first function be replaced with `callable()`?
 
 Do not hesitate to experiment with this code and tell us, if something goes wrong!
 '''
