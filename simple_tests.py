@@ -33,7 +33,8 @@ def test_os_path_exists(path):
     return os.path.exists(path)
 
 
-def iterate_and_print_even_items(data: List[int]):
+def iterate_and_print_even_items():
+    data = [1, 2, 3]
     print('Start working...')
     for i in range(len(data)):
         print(f'Counter: {i}')
