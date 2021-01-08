@@ -2,19 +2,11 @@ import math
 
 import numpy as np
 
-'''
-`assertIs` can be replaced with `assertTrue` in that case, can't it?
-And try some other examples with NumPy-methods calls.
-
-Do not hesitate to experiment with this code and tell us, if something goes wrong! 
-'''
-
 
 def test_positive_calculation(self, obj):
     value = obj.calculate()
-    # error message in case if test case got failed
     message = "First value and second value are not evaluated to same object!"
-    self.assertIs(value, True, message)
+    self.assertTrue(value, message)
 
 
 def include_revision(revision_num, skip_factor=1.1):

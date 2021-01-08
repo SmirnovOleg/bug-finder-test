@@ -4,18 +4,13 @@ import shutil
 import sys
 
 '''
-This function demonstrates BugFinder's capabilities of working with OS methods and attributes.
+This function demonstrates plugin's capabilities of working with OS methods and attributes.
 Also it includes distributed semantic pattern with `enumerate()` function call replacement.
-
-Do not hesitate to experiment with this code and tell us, if something goes wrong!
 '''
 
 
 def load_change_graphs(argv):
     storage_dir = argv[1]
-    if not os.path.exists(storage_dir):
-        print('Storage dit was not found.')
-    print(f'Looking at directory {storage_dir}...')
     file_names = os.listdir(storage_dir)
     print(f'Found {len(file_names)} files in storage directory')
     change_graphs = []
@@ -33,6 +28,7 @@ def load_change_graphs(argv):
         if file_num % 1000 == 0:
             print(f'Loaded [{1 + file_num}/{len(file_names)}] files')
     print('Pattern mining has started')
+
     if argv[2]:
         print('Creating directory with info...')
         os.mkdir(os.path.join(argv[3], 'info'))
