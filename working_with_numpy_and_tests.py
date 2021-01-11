@@ -6,7 +6,7 @@ import numpy as np
 def test_positive_calculation(self, obj):
     value = obj.calculate()
     message = "First value and second value are not evaluated to same object!"
-    self.assertTrue(value, message)
+    self.assertIs(value, True, message)
 
 
 def include_revision(revision_num, skip_factor=1.1):
