@@ -2,10 +2,6 @@ import collections
 import copy
 import types
 
-'''
-Can highlighted `isinstance`-checks in the first function be replaced with `callable()`?
-'''
-
 
 def stream_response_to_file(response, path=None):
     pre_opened = False

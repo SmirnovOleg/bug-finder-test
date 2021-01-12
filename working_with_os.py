@@ -3,11 +3,6 @@ import pickle
 import shutil
 import sys
 
-'''
-This function demonstrates plugin's capabilities of working with OS methods and attributes.
-Also it includes distributed semantic pattern with `enumerate()` function call replacement.
-'''
-
 
 def load_change_graphs(argv):
     storage_dir = argv[1]
