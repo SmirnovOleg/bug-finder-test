@@ -2,20 +2,21 @@ import collections
 import os
 
 import numpy as np
+import tensorflow as tf
 
 
 def test_log(x):
-    return np.log(x + 1)
+    return tf.math.log(1 + tf.abs(x))
 
 
-def test_callable(f):
-    return isinstance(f, collections.Callable)
+def test_callable(self):
+    func_attr = getattr(self, 'func')
+    print(func_attr)
+    return isinstance(func_attr, collections.Callable)
 
 
-def test_dict_keys(vocab):
-    for i in range(len(vocab.keys())):
-        print(i)
-    sorted_keys = sorted(vocab.keys())
+def test_dict_keys(self):
+    sorted_keys = sorted(self.vocab.keys())
     return sorted_keys
 
 
@@ -28,7 +29,6 @@ def test_assert(self, x):
 
 
 def test_os_path_exists(path):
-    os.mkdir(path)
     return os.path.exists(path)
 
 
@@ -40,10 +40,6 @@ def iterate_and_print_even_items():
         current_item = data[i]
         if current_item % 2 == 0:
             print(f'Item: {current_item}')
-
-
-def test_random_choice(data):
-    return np.random.randint(0, len(data))
 
 
 if __name__ == '__main__':

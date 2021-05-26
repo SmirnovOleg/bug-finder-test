@@ -9,7 +9,7 @@ def stream_response_to_file(response, path=None):
         if isinstance(getattr(path, 'write', None), collections.Callable):
             pre_opened = True
             fd = path
-        elif isinstance(getattr(path, 'write', None), types.FunctionType):
+        elif isinstance(getattr(path, 'write', None), types.BuiltinFunctionType):
             pre_opened = True
             fd = path
         else:
