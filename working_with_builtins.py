@@ -5,12 +5,11 @@ import types
 
 def stream_response_to_file(response, path=None):
     pre_opened = False
-    fd = None
     if path:
         if isinstance(getattr(path, 'write', None), collections.Callable):
             pre_opened = True
             fd = path
-        elif isinstance(getattr(path, 'write', None), types.FunctionType):
+        elif isinstance(getattr(path, 'write', None), types.BuiltinFunctionType):
             pre_opened = True
             fd = path
         else:
@@ -46,7 +45,3 @@ def _filter_patterns(storage):
                         break
                 if found:
                     break
-    for k in cleared_keys:
-        storage._size_to_patterns.pop(k)
-    for size in range(len(storage._size_to_patterns.keys())):
-        print(size)

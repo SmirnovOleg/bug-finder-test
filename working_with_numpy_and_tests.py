@@ -12,7 +12,7 @@ def test_positive_calculation(self, obj):
 def include_revision(revision_num, skip_factor=1.1):
     if skip_factor <= 1.0:
         return True
-    return (int(np.log(1 + revision_num) / math.log(skip_factor)) != int(
+    return (int(np.log(1 + abs(revision_num)) / math.log(skip_factor)) != int(
         np.log(revision_num + 2.0) / math.log(skip_factor)))
 
 

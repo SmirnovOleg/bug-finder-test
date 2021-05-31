@@ -1,6 +1,5 @@
 import os
 import pickle
-import shutil
 import sys
 
 
@@ -23,13 +22,6 @@ def load_change_graphs(argv):
         if file_num % 1000 == 0:
             print(f'Loaded [{1 + file_num}/{len(file_names)}] files')
     print('Pattern mining has started')
-
-    if argv[2]:
-        print('Creating directory with info...')
-        os.mkdir(os.path.join(argv[3], 'info'))
-        print('Directory successfully created.')
-    if os.path.exists(argv[4]):
-        shutil.rmtree(argv[4])
 
 
 if __name__ == '__main__':
