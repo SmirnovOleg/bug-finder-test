@@ -2,11 +2,10 @@ import collections
 import os
 
 import numpy as np
-import tensorflow as tf
 
 
 def test_log(x):
-    return tf.math.log(1 + tf.abs(x))
+    return np.log(1 + np.abs(x))
 
 
 def test_callable(self):
